@@ -40,9 +40,10 @@ class Customer
     @history = history
   end
 
-  # Pattern to inform the dependent class that this instance is not null. Could be a mixin module
+  # Pattern to inform the dependent class that this instance is not null. Could be inside a mixin module
   def missing?; false; end
 
+  # static factory-method to return a null-object.
   def self.new_missing
     MissingCustomer.new
   end
